@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImg from '../assets/images/BM-transparent_LOGO.png';
+import logoImg from '../assets/images/bright-minds-logo-transparent.png';
 
 const BrandLogo = ({ variant = 'full', className = '' }) => {
   const isCompact = variant === 'compact';
