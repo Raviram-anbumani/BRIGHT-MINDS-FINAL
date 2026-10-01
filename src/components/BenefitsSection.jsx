@@ -64,8 +64,8 @@ const BenefitsSection = () => {
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-[100px] w-full max-w-[300px] mx-auto opacity-60"></div>
             
             {/* Circular Branded Element */}
-            <div className="relative w-72 h-72 md:w-[300px] md:h-[300px] bg-white rounded-full flex flex-col items-center justify-center shadow-2xl border-4 border-white z-10">
-              <BrandLogo variant="icon" className="w-36 h-36 md:w-44 md:h-44 transform hover:scale-105 transition-transform duration-500" />
+            <div className="relative w-64 h-64 md:w-[320px] md:h-[320px] bg-white rounded-full flex flex-col items-center justify-center shadow-2xl border-[6px] border-white z-10">
+              <BrandLogo variant="icon" className="w-[110px] h-[110px] md:w-[155px] md:h-[155px] transform hover:scale-105 transition-transform duration-500" />
             </div>
           </motion.div>
 

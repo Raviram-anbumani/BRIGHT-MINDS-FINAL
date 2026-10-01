@@ -10,7 +10,7 @@ const BrandLogo = ({ variant = 'full', className = '' }) => {
       <img 
         src={logoImg} 
         alt="Bright Minds Bulb Logo" 
-        className="w-10 h-10 object-contain drop-shadow-sm"
+        className="w-10 h-10 md:w-[50px] md:h-[50px] object-contain drop-shadow-sm"
       />
     </div>
   );
@@ -28,15 +28,15 @@ const BrandLogo = ({ variant = 'full', className = '' }) => {
   }
 
   return (
-    <div className={`flex items-center gap-3 cursor-pointer group ${className}`}>
+    <div className={`flex items-center gap-3 md:gap-4 cursor-pointer group ${className}`}>
       <BulbIcon />
       
       <div className="flex flex-col">
-        <span className="font-brand font-semibold text-2xl text-primary leading-none tracking-wide pt-1">
+        <span className="font-brand font-semibold text-2xl md:text-[32px] text-primary leading-none tracking-wide pt-1 pb-1">
           Bright Minds
         </span>
         {!isCompact && (
-          <span className="font-body text-[0.65rem] font-medium text-textMuted uppercase tracking-widest leading-none mt-1">
+          <span className="font-body text-[0.65rem] md:text-[13px] font-medium text-textMuted uppercase tracking-[0.15em] leading-none">
             Pre-Learning Skill Centre
           </span>
         )}
