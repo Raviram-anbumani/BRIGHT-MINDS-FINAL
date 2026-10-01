@@ -101,9 +101,19 @@ const EnquiryForm = () => {
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1 text-primary">
                   📞
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <h4 className="font-heading font-semibold text-textMain">Call Us</h4>
-                  <a href="tel:8105732962" className="text-textMuted hover:text-primary transition-colors">8105732962</a>
+                  <a href="tel:8105732962" className="text-textMuted hover:text-primary transition-colors inline-block break-words">8105732962</a>
+                </div>
+              </div>
+              <div className="w-full h-px bg-gray-100"></div>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1 text-yellow-600">
+                  ✉️
+                </div>
+                <div className="min-w-0 flex-1">
+                  <h4 className="font-heading font-semibold text-textMain">Email Us</h4>
+                  <a href="mailto:brightmindsplsc@gmail.com" className="text-textMuted hover:text-primary transition-colors inline-block break-all sm:break-normal">brightmindsplsc@gmail.com</a>
                 </div>
               </div>
               <div className="w-full h-px bg-gray-100"></div>
@@ -111,9 +121,9 @@ const EnquiryForm = () => {
                 <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-1 text-secondary">
                   📍
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <h4 className="font-heading font-semibold text-textMain">Visit Us</h4>
-                  <p className="text-textMuted">House No. 2, Nehru Avenue, Bharathidasan Colony, K.K. Nagar, Chennai</p>
+                  <p className="text-textMuted break-words">House No. 2, Nehru Avenue, Bharathidasan Colony, K.K. Nagar, Chennai</p>
                 </div>
               </div>
             </div>
