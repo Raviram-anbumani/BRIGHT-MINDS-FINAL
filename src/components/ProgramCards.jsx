@@ -4,11 +4,10 @@ import { Calculator, Zap, BookOpen, GraduationCap, ChevronRight } from 'lucide-r
 import SectionHeading from './SectionHeading';
 import BrandLogo from './BrandLogo';
 
-// Images for programs
-import abacusImg from '../assets/images/3.jpeg';
-import vedicMathsImg from '../assets/images/2.jpeg';
-import phonicsImg from '../assets/images/9.jpeg';
-import mathTuitionImg from '../assets/images/8.jpeg';
+import abacusImg from '../assets/images/abacus-course.jpg';
+import vedicMathsImg from '../assets/images/vedic-maths-course.jpg';
+import phonicsImg from '../assets/images/phonics-course.jpg';
+import mathTuitionImg from '../assets/images/math-tuition-course.jpg';
 
 const programs = [
   {
@@ -77,11 +76,11 @@ const ProgramCards = () => {
               className="group relative bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 hover:border-transparent transition-all duration-300 hover:-translate-y-2 flex flex-col h-full overflow-hidden"
             >
               {/* Image Header */}
-              <div className="w-full h-48 overflow-hidden relative">
+              <div className="w-full h-[220px] overflow-hidden relative">
                 <img 
                   src={prog.image} 
                   alt={`${prog.title} class`} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
                 
