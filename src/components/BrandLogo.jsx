@@ -1,7 +1,7 @@
 import React from 'react';
 import logoImg from '../assets/images/bright-minds-logo-transparent.png';
 
-const BrandLogo = ({ variant = 'full', className = '' }) => {
+const BrandLogo = ({ variant = 'full', className = '', invertText = false }) => {
   const isCompact = variant === 'compact';
   const isIcon = variant === 'icon';
 
@@ -32,11 +32,11 @@ const BrandLogo = ({ variant = 'full', className = '' }) => {
       <BulbIcon />
       
       <div className="flex flex-col">
-        <span className="font-brand font-semibold text-2xl md:text-[32px] text-primary leading-none tracking-wide pt-1 pb-1">
+        <span className={`font-brand font-semibold text-2xl md:text-[32px] leading-none tracking-wide pt-1 pb-1 ${invertText ? 'text-white' : 'text-primary'}`}>
           Bright Minds
         </span>
         {!isCompact && (
-          <span className="font-body text-[0.65rem] md:text-[13px] font-medium text-textMuted uppercase tracking-[0.15em] leading-none">
+          <span className={`font-body text-[0.65rem] md:text-[13px] font-medium uppercase tracking-[0.15em] leading-none ${invertText ? 'text-[#B8C3D4]' : 'text-textMuted'}`}>
             Pre-Learning Skill Centre
           </span>
         )}
