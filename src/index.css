@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 @import "tailwindcss";
 
@@ -6,6 +6,7 @@
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-sans: 'Inter', sans-serif;
+  --font-brand: 'Fredoka', sans-serif;
 
   --color-primary: #4F8EF7;
   --color-secondary: #7C6CE4;

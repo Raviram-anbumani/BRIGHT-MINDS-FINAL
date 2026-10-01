@@ -1,90 +1,89 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check } from 'lucide-react';
+import { Focus, Brain, Calculator, BookOpen, MessageCircle, Sigma, Sparkles, Lightbulb } from 'lucide-react';
 import SectionHeading from './SectionHeading';
-import benefitsImg from '../assets/images/4.jpeg'; // Ensure this matches an available image
+import BrandLogo from './BrandLogo';
 
-const benefits = [
-  'Better concentration',
-  'Stronger memory',
-  'Faster calculations',
-  'Improved reading',
-  'Better pronunciation',
-  'Strong mathematical foundation',
-  'Increased confidence',
-  'Independent learning habits'
+const leftBenefits = [
+  { text: 'Better concentration', icon: Focus },
+  { text: 'Stronger memory', icon: Brain },
+  { text: 'Faster calculations', icon: Calculator },
+  { text: 'Improved reading', icon: BookOpen }
 ];
 
+const rightBenefits = [
+  { text: 'Better pronunciation', icon: MessageCircle },
+  { text: 'Strong mathematical foundation', icon: Sigma },
+  { text: 'Increased confidence', icon: Sparkles },
+  { text: 'Independent learning habits', icon: Lightbulb }
+];
+
+const BenefitItem = ({ item, delay, side }) => (
+  <motion.div 
+    initial={{ opacity: 0, x: side === 'left' ? -30 : 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: delay * 0.1 }}
+    className={`flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:border-primary/20 hover:shadow-md transition-all ${side === 'left' ? 'lg:flex-row-reverse lg:text-right' : 'flex-row text-left'}`}
+  >
+    <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 text-primary border border-blue-100/50">
+      <item.icon size={22} strokeWidth={2} />
+    </div>
+    <span className="text-gray-700 font-medium text-lg">{item.text}</span>
+  </motion.div>
+);
+
 const BenefitsSection = () => {
-  // Split benefits into two columns for desktop layout around the image
-  const leftBenefits = benefits.slice(0, 4);
-  const rightBenefits = benefits.slice(4, 8);
-
-  const BenefitItem = ({ text, delay }) => (
-    <motion.div 
-      initial={{ opacity: 0, x: delay % 2 === 0 ? -20 : 20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: delay * 0.1 }}
-      className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm border border-gray-50"
-    >
-      <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 text-accent">
-        <Check size={16} strokeWidth={3} />
-      </div>
-      <span className="text-gray-700 font-medium">{text}</span>
-    </motion.div>
-  );
-
   return (
-    <section className="py-24 bg-gray-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-gray-50 overflow-hidden relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading 
           title="More Than Just Classes" 
           subtitle="We focus on overall cognitive and academic growth."
         />
 
-        <div className="mt-16 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-8 relative">
+        {/* Benefits Grid Layout */}
+        <div className="mt-16 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-12 relative">
           
-          {/* Left Column (Desktop) */}
-          <div className="w-full lg:w-1/3 flex flex-col gap-4 order-2 lg:order-1">
-            {leftBenefits.map((benefit, index) => (
-              <BenefitItem key={index} text={benefit} delay={index} />
+          {/* Left Column */}
+          <div className="w-full lg:w-1/3 flex flex-col gap-5 order-2 lg:order-1">
+            {leftBenefits.map((item, index) => (
+              <BenefitItem key={index} item={item} delay={index} side="left" />
             ))}
           </div>
 
-          {/* Central Image */}
+          {/* Central Logo */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="w-full sm:w-2/3 lg:w-1/3 order-1 lg:order-2 px-4"
+            transition={{ duration: 0.7, type: "spring", stiffness: 100 }}
+            className="w-full sm:w-2/3 lg:w-1/3 order-1 lg:order-2 px-4 flex justify-center py-8 lg:py-0 relative"
           >
-            <div className="relative rounded-full aspect-square overflow-hidden shadow-2xl shadow-primary/20 border-8 border-white">
-              <img 
-                src={benefitsImg} 
-                alt="Child enjoying learning" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            {/* Subtle radial glow */}
+            <div className="absolute inset-0 bg-primary/20 rounded-full blur-[100px] w-full max-w-[300px] mx-auto opacity-60"></div>
+            
+            {/* Circular Branded Element */}
+            <div className="relative w-64 h-64 md:w-72 md:h-72 bg-white rounded-full flex flex-col items-center justify-center shadow-2xl border-4 border-white z-10 overflow-hidden">
+              <BrandLogo variant="icon" className="w-32 h-32 md:w-40 md:h-40 transform hover:scale-105 transition-transform duration-500" />
             </div>
           </motion.div>
 
-          {/* Right Column (Desktop) */}
-          <div className="w-full lg:w-1/3 flex flex-col gap-4 order-3 lg:order-3">
-            {rightBenefits.map((benefit, index) => (
-              <BenefitItem key={index + 4} text={benefit} delay={index + 4} />
+          {/* Right Column */}
+          <div className="w-full lg:w-1/3 flex flex-col gap-5 order-3 lg:order-3">
+            {rightBenefits.map((item, index) => (
+              <BenefitItem key={index + 4} item={item} delay={index + 4} side="right" />
             ))}
           </div>
 
         </div>
         
-        {/* Age Group Section inside Benefits for cohesive flow */}
+        {/* Age Group Section */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-24 bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 text-center max-w-4xl mx-auto relative overflow-hidden"
+          className="mt-32 bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 text-center max-w-4xl mx-auto relative overflow-hidden"
         >
           <div className="absolute right-0 top-0 w-32 h-32 bg-supporting/10 rounded-full blur-2xl"></div>
           <div className="absolute left-0 bottom-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>

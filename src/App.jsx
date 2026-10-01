@@ -11,7 +11,6 @@ import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import EnquiryForm from './components/EnquiryForm';
-import ContactCTA from './components/ContactCTA';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -51,7 +50,6 @@ function App() {
         
         <div id="contact" className="bg-white">
           <EnquiryForm />
-          <ContactCTA />
         </div>
       </main>
       <Footer />
