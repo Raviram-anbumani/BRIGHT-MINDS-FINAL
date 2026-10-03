@@ -34,8 +34,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
             <a href="#home">
-              <BrandLogo variant="full" className="hidden md:flex" />
-              <BrandLogo variant="compact" className="flex md:hidden" />
+              <BrandLogo variant="full" className="flex" />
             </a>
           </div>
           
