@@ -55,7 +55,9 @@ const AboutSection = () => {
           >
             <div className="inline-flex items-center gap-2 mb-4">
               <BrandLogo variant="icon" className="w-6 h-6 scale-75 transform origin-left" />
-              <span className="text-primary font-semibold tracking-wider text-sm uppercase">About Bright Minds</span>
+              <span className="text-primary font-semibold tracking-wider text-sm uppercase">
+                About <span className="font-brand font-bold uppercase">BRIGHT MINDS</span>
+              </span>
             </div>
             
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-textMain mb-6 text-balance leading-tight">

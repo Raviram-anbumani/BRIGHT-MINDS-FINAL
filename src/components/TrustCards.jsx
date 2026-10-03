@@ -46,7 +46,7 @@ const itemVariants = {
 
 const TrustCards = () => {
   return (
-    <section className="py-12 bg-white relative z-20 -mt-10 mx-4 sm:mx-6 lg:mx-8 rounded-2xl shadow-xl shadow-gray-200/50 max-w-7xl xl:mx-auto">
+    <section className="py-8 md:py-12 bg-white relative z-20 mt-4 md:-mt-10 mx-4 sm:mx-6 lg:mx-8 rounded-2xl shadow-xl shadow-gray-200/50 max-w-7xl xl:mx-auto">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <motion.h2 

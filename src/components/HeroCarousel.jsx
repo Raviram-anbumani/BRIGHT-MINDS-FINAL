@@ -60,7 +60,7 @@ const HeroCarousel = () => {
 
   return (
     <div 
-      className="relative w-full h-[85vh] min-h-[600px] mt-[72px] overflow-hidden bg-gray-900"
+      className="relative w-full h-[100svh] md:h-[85vh] min-h-[500px] md:min-h-[600px] mt-[72px] overflow-hidden bg-gray-900"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -99,7 +99,7 @@ const HeroCarousel = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight mb-6 text-balance"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight mb-4 md:mb-6 text-balance"
                 >
                   {slides[current].headline}
                 </motion.h1>
@@ -108,7 +108,7 @@ const HeroCarousel = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7 }}
-                  className="text-lg md:text-xl text-gray-200 mb-10 max-w-xl text-balance"
+                  className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 md:mb-10 max-w-xl text-balance"
                 >
                   {slides[current].description}
                 </motion.p>
@@ -117,17 +117,17 @@ const HeroCarousel = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.9 }}
-                  className="flex flex-wrap gap-4"
+                  className="flex flex-col sm:flex-row gap-3 sm:gap-4"
                 >
                   <a 
                     href={slides[current].primaryLink}
-                    className="bg-accent hover:bg-[#e6b44e] text-textMain px-8 py-3.5 rounded-full font-semibold transition-all hover:scale-105"
+                    className="bg-accent hover:bg-[#e6b44e] text-textMain px-8 py-3.5 rounded-full font-semibold transition-all hover:scale-105 text-center w-full sm:w-auto"
                   >
                     {slides[current].primaryCTA}
                   </a>
                   <a 
                     href={slides[current].secondaryLink}
-                    className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-3.5 rounded-full font-semibold transition-all hover:scale-105"
+                    className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-3.5 rounded-full font-semibold transition-all hover:scale-105 text-center w-full sm:w-auto"
                   >
                     {slides[current].secondaryCTA}
                   </a>

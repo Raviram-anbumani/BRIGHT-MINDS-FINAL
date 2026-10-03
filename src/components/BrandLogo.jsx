@@ -32,8 +32,8 @@ const BrandLogo = ({ variant = 'full', className = '', invertText = false }) => 
       <BulbIcon />
       
       <div className="flex flex-col">
-        <span className={`font-brand font-semibold text-[26px] md:text-[34px] leading-none tracking-wide pt-1 pb-1 ${invertText ? 'text-[#F8FAFC]' : 'text-primary'}`}>
-          Bright Minds
+        <span className={`font-brand font-bold uppercase text-[26px] md:text-[34px] leading-none tracking-wide pt-1 pb-1 ${invertText ? 'text-[#F8FAFC]' : 'text-primary'}`}>
+          BRIGHT MINDS
         </span>
         {!isCompact && (
           <span className={`font-body text-[11px] md:text-[13px] font-medium uppercase tracking-[0.15em] leading-none ${invertText ? 'text-[#B8C3D4]' : 'text-textMuted'}`}>

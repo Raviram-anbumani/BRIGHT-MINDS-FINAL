@@ -15,8 +15,20 @@ const Footer = () => {
           
           {/* Brand Col */}
           <div className="lg:col-span-5 flex flex-col items-start">
-            <div className="mb-6">
-              <BrandLogo variant="full" invertText={true} />
+            <div className="mb-6 flex flex-row items-center gap-4">
+              <img 
+                src="/src/assets/images/bright-minds-logo-transparent.png" 
+                alt="Bright Minds Bulb Logo" 
+                className="w-12 h-12 md:w-[60px] md:h-[60px] object-contain flex-shrink-0"
+              />
+              <div className="flex flex-col items-start text-left">
+                <span className="font-brand font-bold uppercase text-2xl md:text-[34px] text-white leading-none tracking-wide pt-1 pb-1">
+                  BRIGHT MINDS
+                </span>
+                <span className="font-body text-[11px] md:text-[14px] font-medium text-[#B8C3D4] uppercase tracking-[0.15em] leading-none mt-1">
+                  Pre-Learning Skill Centre
+                </span>
+              </div>
             </div>
             <p className="text-[#B8C3D4] text-[15px] mb-5 max-w-[300px] leading-relaxed">
               Building strong foundations for brighter learning journeys.

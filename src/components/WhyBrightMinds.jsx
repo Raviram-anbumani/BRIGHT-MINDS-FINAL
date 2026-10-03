@@ -39,7 +39,7 @@ const features = [
 
 const WhyBrightMinds = () => {
   return (
-    <section className="py-24 bg-bgLight relative overflow-hidden">
+    <section className="py-12 md:py-24 bg-bgLight relative overflow-hidden">
       {/* Decorative Brand Logo */}
       <div className="absolute left-[-10%] top-[10%] opacity-[0.02] pointer-events-none">
         <BrandLogo variant="icon" className="w-96 h-96" />
@@ -51,7 +51,7 @@ const WhyBrightMinds = () => {
           subtitle="We focus on creating a positive, structured and engaging learning experience for every child."
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[18px] md:gap-8 -mt-6 md:mt-0">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -59,13 +59,13 @@ const WhyBrightMinds = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-primary/20 hover:shadow-md transition-all group"
+              className="bg-white px-6 py-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-primary/20 hover:shadow-md transition-all group h-auto min-h-0"
             >
-              <div className="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <div className="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center mb-4 md:mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                 <feature.icon size={24} />
               </div>
-              <h3 className="text-xl font-heading font-semibold mb-3 text-textMain">{feature.title}</h3>
-              <p className="text-textMuted leading-relaxed">{feature.description}</p>
+              <h3 className="text-[21px] md:text-xl leading-[1.25] md:leading-snug font-heading font-semibold mb-2 md:mb-3 text-textMain">{feature.title}</h3>
+              <p className="text-[16px] md:text-base text-textMuted leading-[1.5] md:leading-relaxed mb-0">{feature.description}</p>
             </motion.div>
           ))}
         </div>
